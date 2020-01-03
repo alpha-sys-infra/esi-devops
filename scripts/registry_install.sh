@@ -41,7 +41,7 @@ docker run -d -v ${location}/auth:/auth -e "REGISTRY_AUTH=htpasswd" -e "REGISTRY
 
 # add insecure-registry
 sudo mkdir -p /etc/docker
-ipaddr=`ifconfig |grep ens192 -A 1|grep inet|awk {'print $2'}`
+ipaddr=`ifconfig |grep eth0 -A 1|grep inet|awk {'print $2'}`
 sudo cat > /etc/docker/daemon.json <<EOF
 {
   "insecure-registries": ["${ipaddr}:${port}"]
