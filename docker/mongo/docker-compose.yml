@@ -10,4 +10,4 @@ services:
       ROOT_USERNAME: 
       ROOT_PASSWORD: 
     volumes:
-      - 持久化路径:/data/db
+      - /home/mongodb/data/db:/data/db

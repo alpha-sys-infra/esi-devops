@@ -9,7 +9,9 @@ data_name=$4
 ip_address=$5
 memo_limit=$6
 memo_prev=$7
+volume=$7
 port=$8
+export_port=$8
 service_image=$9
 service_name=$10
 service_restart_policy=$11
@@ -35,7 +37,7 @@ RUN cd /tmp && npm install
 RUN mkdir -p /src && cp -a /tmp/node_modules /src/
 WORKDIR /src
 ADD . /src
-EXPOSE ???
+EXPOSE ${export_port}
 CMD ["node", "/src/index.js"]
 EOF
 
@@ -54,9 +56,9 @@ services:
     image: 192.168.16.5:5000/${service_image}
     container_name: ${container_name}
     ports:
-      - ${port}:???
+      - ${port}:${export_port}
     volumes:
-      - ${data_name}:???
+      - ${data_name}:/home/nodejs
     restart: ${service_restart_policy}
     deploy:
       resources:
@@ -66,12 +68,8 @@ services:
         reservations:
           cpus: ${cpu_prev}
           memory: ${memo_prev}
-    networks:
-        - ???
 volumes:
   ${data_name}:
-networks:
-  ???
 EOF
 
 cd /home/
