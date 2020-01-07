@@ -1,0 +1,1 @@
+./scripts/template.sh hello_world  1 1 /home/helloworld 180.76.155.25 200 300 8080 80 hello_world hello_world always ubuntu:16.04 https://github.com/EickeOe/nodejs-helloworld master src/index.js

@@ -13,4 +13,6 @@
 ----| registry_install.sh __ docker registry安装脚本
 ----| registry_ui_install.sh __ registry ui安装脚本
 ----| template.sh __ nodejs微服务生成容器脚本
+--| test
+----| template.test.sh __ template.sh的测试脚本
 ```

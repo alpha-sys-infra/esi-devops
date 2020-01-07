@@ -79,3 +79,6 @@ docker logout ${ipaddr}:${port}
 echo "###########"
 echo "Logged Out!"
 echo "###########"
+
+
+./template.sh hello_world  1 1 /home/helloworld 180.76.155.25 200 300 8080 80 ubuntu hello_world no-failure 0.0.1 https://github.com/EickeOe/nodejs-helloworld master "node index.js"
