@@ -6,7 +6,10 @@
 
 ```markup
 --| docker
-----| docker-compose.yaml __ mongodb 容器的docker-compose
+----| mongo
+------| docker-compose.yml __ mongodb 容器的docker-compose
+----| mysql
+------| docker-compose.yml __ mysql 容器的docker-compose
 --| scripts
 ----| docker_compose_install.sh __ docker compose安装脚本
 ----| docker_install.sh __ docker安装脚本

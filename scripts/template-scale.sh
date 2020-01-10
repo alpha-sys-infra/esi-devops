@@ -98,7 +98,6 @@ services:
   
   ${service_name}:
     image: 192.168.16.5:5000/${service_image}
-    container_name: ${container_name}
     volumes:
       - /data/${service_name}/svcdata:${data_name}
     restart: ${service_restart_policy}
