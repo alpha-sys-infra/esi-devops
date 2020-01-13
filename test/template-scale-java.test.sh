@@ -1,0 +1,1 @@
+./template-scale-java.sh city-fire 1 1 /home/city-fire 180.76.155.25 200 300 8080 8080 city-fire city-fire always git@github.com:alpha-sys-infra/city-fire.git master

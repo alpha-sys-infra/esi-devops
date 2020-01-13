@@ -1,0 +1,1 @@
+./template-scale-vue-nginx.sh city-fire-front  1 1 /home/city-fire-front 180.76.155.25 200 300 8080 8081 city-fire-front city-fire-front always git@github.com:alpha-sys-infra/city-fire-front.git master
